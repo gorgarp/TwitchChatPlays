@@ -28,7 +28,7 @@ This bot allows Twitch chat to control a game running in the BizHawk emulator. U
 ## Configuration
 
 1. **Set up Twitch IRC:**
-   - Create a Twitch account for the bot or use an existing one.
+   - Create a Twitch account for the bot or use an existing one. (You can just use your regular account if you wish)
    - Obtain an OAuth token for the Twitch IRC. This can be done through [Twitch Chat OAuth Password Generator](https://twitchapps.com/tmi/).
    - Replace the placeholders in the script with the bot's Twitch username and the OAuth token:
      ```python
