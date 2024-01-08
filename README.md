@@ -13,8 +13,8 @@ This bot allows Twitch chat to control a game running in the BizHawk emulator. U
 
 1. **Clone the repository:**
    ```bash
-   git clone [URL of your GitHub repository]
-   cd [Repository Name]
+   git clone https://github.com/gorgarp/TwitchChatPlays.git
+   cd TwitchChatPlays
    ```
 
 2. **Install necessary Python libraries:**
