@@ -43,7 +43,7 @@ This bot allows Twitch chat to control a game running in the BizHawk emulator. U
 
 1. **Run the Bot:**
    ```bash
-   python [name of your python script].py
+   python main.py
    ```
 
 2. **Start your game in BizHawk.**
