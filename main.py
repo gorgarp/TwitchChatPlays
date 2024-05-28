@@ -4,6 +4,7 @@ import time
 
 CHANNEL_NAME = "ChannelName"
 TOKEN = "oauth:xxxxxxxxxxxxx"
+IGNORE_CHAR = ":"  # Define the character to ignore usernames
 
 command_map = {
     'a': '4',
@@ -22,10 +23,15 @@ command_map = {
 
 def on_connect(connection, event):
     connection.join('#' + CHANNEL_NAME)
-    
+
+def process_message(message):
+    if IGNORE_CHAR in message:
+        message = message.split(IGNORE_CHAR, 1)[1].strip()
+    return message
+
 def on_pubmsg(connection, event):
-    message = event.arguments[0].lower().split()
-    directional_commands = {'left': 'a', 'right': 'd', 'up': 'w', 'down': 's'}
+    message = process_message(event.arguments[0].lower()).split()
+    directional_commands = {'left': 'a', 'right': 'up', 'up': 'w', 'down': 's'}
 
     if len(message) == 2 and message[0] in directional_commands and message[1].isdigit():
         num_presses = int(message[1])
